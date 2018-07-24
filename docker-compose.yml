@@ -15,8 +15,6 @@ services:
       PHP_DATE_TIMEZONE: asia/tehran
   mysql:
     image: mysql:5.7
-    # ports:
-      # - "3306:3306"
     volumes:
       - ./.data/mysql:/var/lib/mysql
     environment:
