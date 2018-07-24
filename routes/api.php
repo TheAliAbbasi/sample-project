@@ -22,3 +22,15 @@ Route::group([
   Route::post('logout', 'AuthController@logout');
   Route::post('refresh', 'AuthController@refresh');
 });
+
+Route::group([
+  'middleware' => ['auth:api'],
+  'namespace'  => 'Api'
+], function($router) {
+    Route::resource('category', 'CategoryController', [
+        'except'        =>  [
+            'create', 'edit'
+        ]
+    ]);
+
+});
