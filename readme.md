@@ -5,7 +5,7 @@ This is a sample project, which includes a minimal process for login/register us
 First off you need to have git, composer and docker installed on your computer.
 1. ```git clone https://github.com/TheAliAbbasi/sample-project.git```
 2. ```composer install```
-3. ```docker exec -it sample-project_web php /app/artisan migrate```
+3. ```docker exec -it sample-project_web_1 php /app/artisan migrate```
 4. ```cp .env.example .env```
 5. ```docker-compose up -d```
 
