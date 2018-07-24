@@ -33,4 +33,14 @@ Route::group([
         ]
     ]);
 
+    Route::get('post/{post}/toggle', [
+        'uses'      =>  'PostController@togglePublish',
+        'as'        =>  'post.toggle'
+    ]);
+
+    Route::resource('post', 'PostController', [
+        'except'        =>  [
+            'create', 'edit'
+        ]
+    ]);
 });
